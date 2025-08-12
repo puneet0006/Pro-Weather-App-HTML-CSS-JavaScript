@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pro Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="card glass">
+      <header class="card-header">
+        <div class="brand">
+          <div class="logo">☁️</div>
+          <div>
+            <h1>Pro Weather</h1>
+            <p class="tag">Fast • Clean • Responsive</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="geoBtn" title="Use my location">📍</button>
+          <button id="unitToggle" title="Toggle °C/°F">°C</button>
+        </div>
+      </header>
+
+      <section class="search">
+        <input id="cityInput" type="text" placeholder="Search city, e.g. Mumbai" aria-label="city name">
+        <button id="searchBtn">Search</button>
+      </section>
+
+      <section id="loader" class="loader hidden">Loading…</section>
+
+      <section id="weatherSection" class="weather hidden">
+        <div class="current">
+          <div class="left">
+            <div id="location" class="location">—</div>
+            <div id="desc" class="desc">—</div>
+            <div class="temp-row">
+              <div id="temp" class="temp">--°</div>
+              <img id="icon" class="icon" src="" alt="weather icon">
+            </div>
+          </div>
+
+          <div class="right stats">
+            <div><strong id="feels">--</strong><span>Feels</span></div>
+            <div><strong id="hum">--</strong><span>Humidity</span></div>
+            <div><strong id="wind">--</strong><span>Wind</span></div>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <h4>Next hours</h4>
+          <div id="hourly" class="hourly-row"></div>
+        </div>
+
+        <footer class="card-footer">
+          <small>Data by OpenWeatherMap • Built for internship portfolio</small>
+        </footer>
+      </section>
+
+      <section id="error" class="error hidden"></section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
